@@ -6,6 +6,8 @@ Quistroll is a service that brings a new function to Google Map which takes us t
 
 In case you are sick of all-too-common travel, we highly recommend that you use Quistroll.
 
+[![](https://img.youtube.com/vi/Zf3ldja1VyM/0.jpg)](https://www.youtube.com/watch?v=Zf3ldja1VyM)
+
 ## Setup
 Get some necessary information and set the environment variables by following the steps below.
 
