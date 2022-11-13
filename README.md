@@ -13,7 +13,7 @@ Get some necessary information and set the environment variables by following th
 
 From the Google Cloud console, you can use the Google Maps Platform service.
 
-You will need to create an API key that enables the Maps Javascript API for the frontend and another API key that enables the Places API and Directions API for the backend. ([link](https://developers.google.com/maps/documentation/javascript/get-api-key))
+You will need to create an API key that enables [Maps Javascript API](https://developers.google.com/maps/documentation/javascript/overview) for the frontend and another API key that enables [Places API](https://developers.google.com/maps/documentation/places/web-service) and [Directions API](https://developers.google.com/maps/documentation/directions/overview) for the backend. ([link](https://developers.google.com/maps/documentation/javascript/get-api-key))
 
 After creating the API keys, set the environment variables as follows.
 
