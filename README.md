@@ -7,30 +7,34 @@ Quistroll is a service that brings a new function to Google Map which takes us t
 In case you are sick of all-too-common travel, we highly recommend that you use Quistroll.
 
 ## Setup
+Get some necessary information and set the environment variables by following the steps below.
 
-Quistroll consists of several external services. Get some necessary information and set the environment variables by following the steps below.
+### Google Map Platform
 
-### Maps Javascript API 
+From the Google Cloud console, you can use the Google Maps Platform service.
 
-Please refer to [this document](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=ja) to issue an API key and endpoint.
+You will need to create an API key that enables the Maps Javascript API for the frontend and another API key that enables the Places API and Directions API for the backend. ([link](https://developers.google.com/maps/documentation/javascript/get-api-key))
 
-If the API key is issued, set the environment variable as follows.
+After creating the API keys, set the environment variables as follows.
 
 ```shell
 export VUE_APP_GOOGLE_MAP_KEY = <your-maps-javascript-api-key>
 
 ```
 
-### Google Map Platform
+### Express Server
+The following environment variables should also be set for the backend server.
 
-Create your Google account by referring to [this document](https://support.google.com/accounts/answer/27441)
+```shell
+export VUE_APP_GOOGLE_MAP_KEY = <your-maps-javascript-api-key>
 
-Go to the [Google Cloud console](https://cloud.google.com) and set up a billing account. Then, make a project on Google Cloud console and activate Maps JavaScript API.
+```
 
-After activating  Maps JavaScript API, choose Places API and Directions API.
+### dotenv
 
-Next, issue your API key and set the limit number of using your API key per a day.
+In addition, Debatter_bot uses [dotenv](https://github.com/motdotla/dotenv) library.
 
+You can also set environment variables by adding a .env file directly under the project root folder.
 
 ## Deployment
 
@@ -40,6 +44,7 @@ To start up the program, simply execute the following command.
 
 ```shell
 npm run build
+npm start
 ```
 
 ## How to use
@@ -47,14 +52,17 @@ Turn on your location service on your smart phone, then open your browser and fo
 
 Since a quiz is displayed on the upper side of your browser, so head to a place where a quiz indicates and click on submit button.
 
-Quistroll supports follwing cities; Tokyo, New York, and Paris.
+Quistroll has prepared a quiz on Tokyo as a sample.
+(To add quizzes about other regions, please edit the json file.)
 
 ### Detail
 
-1. Point of departure and final destination is designated in each city. What you do is that head to final destination via some checkpoints.
+1. In the first screen, the user scans the QR code and loads the quiz. (The QR code for the sample quiz is here.)
 
-2. After clicking on submit button, Quistroll judges your location is right or not based on your current location on GPS, Quistroll checks your location if it is right or not. 
+2. Point of departure and final destination is designated in each city. What you do is that head to final destination via some checkpoints.
 
-3. If your submission is right, Quistroll shows next checkpoint's quiz, so go to the next destination. If your submission is wrong, some hints pop up depending on the number of times you submit wrong location. By the way, hints are displayed up to three times. Based on some hints, find a correct checkpoint.
+3. After clicking on submit button, Quistroll judges your location is right or not based on your current location on GPS, Quistroll checks your location if it is right or not. 
 
-> **Note**  
+4. If your submission is right, Quistroll shows next checkpoint's quiz, so go to the next destination. 
+
+5.If your submission is wrong, some hints pop up depending on the number of times you submit wrong location. By the way, hints are displayed up to three times. Based on some hints, find a correct checkpoint.
