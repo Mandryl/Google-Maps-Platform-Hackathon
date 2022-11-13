@@ -18,16 +18,18 @@ You will need to create an API key that enables the Maps Javascript API for the 
 After creating the API keys, set the environment variables as follows.
 
 ```shell
-export VUE_APP_GOOGLE_MAP_KEY = <your-maps-javascript-api-key>
-
+export VUE_APP_GOOGLE_MAP_KEY = <FrontEnd API-KEY>
+export BACK_GOOGLE_MAP_KEY = <BackEnd API-KEY>
 ```
 
 ### Express Server
 The following environment variables should also be set for the backend server.
 
 ```shell
-export VUE_APP_GOOGLE_MAP_KEY = <your-maps-javascript-api-key>
-
+export PORT = <Listen Port of Express Server (Default is "3000")>
+export LOG_LEVEL = <Log Level of Logger (Default is "info")>
+export BASIC_ID = <User ID of Basic Authentication>
+export BASIC_PASS = <Password of Basic Authentication>
 ```
 
 ### dotenv
@@ -53,11 +55,11 @@ Turn on your location service on your smart phone, then open your browser and fo
 Since a quiz is displayed on the upper side of your browser, so head to a place where a quiz indicates and click on submit button.
 
 Quistroll has prepared a quiz on Tokyo as a sample.
-(To add quizzes about other regions, please edit the json file.)
+(To add quizzes about other regions, please edit the [json](https://github.com/Mandryl/Google-Maps-Platform-Hackathon/blob/main/server/db/initialData/quiz.json) file.)
 
 ### Detail
 
-1. In the first screen, the user scans the QR code and loads the quiz. (The QR code for the sample quiz is here.)
+1. In the first screen, the user scans the QR code and loads the quiz. (The QR code for the sample quiz is [here](https://github.com/Mandryl/Google-Maps-Platform-Hackathon/blob/main/artifact/image/tokyo/Qrcode_Tokyo.jpg).)
 
 2. Point of departure and final destination is designated in each city. What you do is that head to final destination via some checkpoints.
 
@@ -65,4 +67,9 @@ Quistroll has prepared a quiz on Tokyo as a sample.
 
 4. If your submission is right, Quistroll shows next checkpoint's quiz, so go to the next destination. 
 
-5.If your submission is wrong, some hints pop up depending on the number of times you submit wrong location. By the way, hints are displayed up to three times. Based on some hints, find a correct checkpoint.
+5. If your submission is wrong, some hints pop up depending on the number of times you submit wrong location. By the way, hints are displayed up to three times. Based on some hints, find a correct checkpoint.
+- If you submit a wrong place once, images of the check point posted by Google Map users will be displayed as a hint.
+
+- If you submit a wrong place twice, a review of the check point posted by a Google Map user will be displayed as a hint.
+
+- If you submit a wrong place three times, a nearby place of the check point will be displayed as a hint.
