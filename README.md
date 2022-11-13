@@ -36,7 +36,7 @@ export BASIC_PASS = <Password of Basic Authentication>
 
 ### dotenv
 
-In addition, Debatter_bot uses [dotenv](https://github.com/motdotla/dotenv) library.
+In addition, Quistroll uses [dotenv](https://github.com/motdotla/dotenv) library.
 
 You can also set environment variables by adding a .env file directly under the project root folder.
 
