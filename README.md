@@ -1,27 +1,5 @@
 # Quistroll
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
---------------------------------------------------README記載内容-----------------------------------------------------------------------
-
-# Quistroll
-
 ## Overview
 
 Quistroll is a service that brings a new function to Google Map which takes us to unfamiliar places in abroad.
@@ -40,6 +18,7 @@ If the API key is issued, set the environment variable as follows.
 
 ```shell
 export VUE_APP_GOOGLE_MAP_KEY = <your-maps-javascript-api-key>
+
 ```
 
 ### Google Map Platform
@@ -52,11 +31,6 @@ After activating  Maps JavaScript API, choose Places API and Directions API.
 
 Next, issue your API key and set the limit number of using your API key per a day.
 
-### dotenv
-
-In addition, Quistroll uses [dotenv](https://github.com/motdotla/dotenv) library.
-
-You can also set environment variables by adding a .env file directly under the project root folder.
 
 ## Deployment
 
